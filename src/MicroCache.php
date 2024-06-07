@@ -16,9 +16,9 @@ class MicroCache
      * It holds key-value pairs, where each key represents a unique identifier for the cached item,
      * and the corresponding value holds the actual cached data.
      *
-     * @var array<string, mixed> $cache The associative array used to store cached items.
+     * @var array<string, mixed> $microCache The associative array used to store cached items.
      */
-    protected static array $cache = [];
+    protected static array $microCache = [];
 
     /**
      * Store an item in the cache.
@@ -44,7 +44,7 @@ class MicroCache
         // Normalize the item key
         $key = self::normalizeItemKey($key);
         // Store the item in the cache
-        static::$cache[$key] = [
+        static::$microCache[$key] = [
             'value' => $value,
             'exp' => $ttl !== 0 ? time() + $ttl : 0,
         ];
@@ -78,7 +78,7 @@ class MicroCache
         $key = self::normalizeItemKey($key);
         // Check if the item exists in the cache and is not expired
         if (self::has($key)) {
-            return static::$cache[$key]['value'];
+            return static::$microCache[$key]['value'];
         }
         return null;
     }
@@ -106,7 +106,7 @@ class MicroCache
         // Check if the item exists in the cache
         if (self::has($key)) {
             // Delete the item from the cache
-            unset(static::$cache[$key]);
+            unset(static::$microCache[$key]);
         }
     }
 
@@ -125,7 +125,7 @@ class MicroCache
     public static function clear(): void
     {
         // Clear the cache
-        static::$cache = [];
+        static::$microCache = [];
     }
 
     /**
@@ -153,15 +153,15 @@ class MicroCache
         // Normalize the item key
         $key = self::normalizeItemKey($key);
         // Check if the item exists in the cache
-        if (empty(static::$cache[$key])) {
+        if (empty(static::$microCache[$key])) {
             return false;
         }
         // Get the cached item
-        $item = static::$cache[$key];
+        $item = static::$microCache[$key];
         // Check if the item has expired
         if ($item['exp'] !== 0 && $item['exp'] < time()) {
             // If expired, delete the item from the cache
-            unset(static::$cache[$key]);
+            unset(static::$microCache[$key]);
             return false;
         }
         return true;

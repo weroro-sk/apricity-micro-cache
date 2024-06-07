@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [ ] PHPStan
 
+## [1.10.0] - 2024-06-08
+
+### Added
+
+- Cache inheritance and creating a unique cache.
+
+### Changed
+
+- README.md added inheritance and unique cache creation section.
+
 ## [1.9.2] - 2024-06-06
 
 ### Added

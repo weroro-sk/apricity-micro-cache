@@ -4,7 +4,7 @@ MicroCache is a lightweight and simple in-memory caching solution that allows yo
 It is particularly useful for caching data that is expensive to generate or retrieve from external sources.
 
 > Class provides a straightforward approach to caching data in memory, allowing for efficient storage and
-retrieval of cached items.
+> retrieval of cached items.
 
 ## Installation
 
@@ -25,6 +25,7 @@ composer require apricity/micro-cache
         - [example](#example-3)
     - [MicroCache::has](#microcachehas)
         - [example](#example-4)
+2. [Inheritance](#inheritance-and-creation-of-a-unique-cache)
 2. [Tests](#run-tests)
 3. [Changelog](CHANGELOG.md)
 3. [License](#license)
@@ -168,6 +169,48 @@ if (MicroCache::has('my_key')) {
 } else {
     echo "Cache does not exist or has expired";
 }
+```
+
+---
+
+## Inheritance and creation of a unique cache
+
+#### Shared cache
+
+```php
+use Apricity\MicroCache;
+
+class SharedCache extends MicroCache {}
+
+SharedCache::set('shared_cache_key', 'shared_value');
+
+SharedCache::get('shared_cache_key'); // shared_value
+MicroCache::get('shared_cache_key'); // shared_value
+
+MicroCache::set('cache_key', 'cached_value');
+
+SharedCache::get('cache_key'); // cached_value
+MicroCache::get('cache_key'); // cached_value
+```
+
+#### Unique cache
+
+```php
+use Apricity\MicroCache;
+
+class UniqueCache extends MicroCache {
+    protected static array $microCache = []; // Non-shared unique cache.
+}
+
+UniqueCache::set('unique_cache_key', 'unique_value');
+
+UniqueCache::get('unique_cache_key'); // unique_value
+MicroCache::get('unique_cache_key'); // null
+
+MicroCache::set('cache_key', 'cached_value');
+
+UniqueCache::get('cache_key'); // null
+MicroCache::get('cache_key'); // cached_value
 ```
 
 ---

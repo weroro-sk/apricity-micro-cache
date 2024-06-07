@@ -2,6 +2,8 @@
 
 namespace Apricity\tests;
 
+use Apricity\tests\mocks\SharedCache;
+use Apricity\tests\mocks\UniqueCache;
 use PHPUnit\Framework\TestCase;
 use InvalidArgumentException;
 use Apricity\MicroCache;
@@ -93,5 +95,29 @@ class MicroCacheTest extends TestCase
         } catch (ReflectionException $e) {
             $this->fail($e->getMessage());
         }
+    }
+
+    public function testInheritanceSharedCache()
+    {
+        SharedCache::set('shared_key', 'shared_value', 3600);
+        $sharedValue = SharedCache::get('shared_key');
+        $value = MicroCache::get('shared_key');
+
+        $this->assertEquals($sharedValue, $value);
+
+        SharedCache::clear();
+    }
+
+    public function testInheritanceUniqueCache()
+    {
+        UniqueCache::set('unique_key', 'unique_value', 3600);
+        $sharedValue = UniqueCache::get('unique_key');
+        $value = MicroCache::get('unique_key');
+
+        $this->assertNotEquals($sharedValue, $value);
+        $this->assertEquals('unique_value', $sharedValue);
+        $this->assertEquals(null, $value);
+
+        UniqueCache::clear();
     }
 }
