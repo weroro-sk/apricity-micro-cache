@@ -2,6 +2,6 @@ tests/ export-ignore
 vendor/ export-ignore
 .idea/ export-ignore
 .git/ export-ignore
-composer.lock/ export-ignore
-.gitignore/ export-ignore
-.gitattributes/ export-ignore
+composer.lock export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
