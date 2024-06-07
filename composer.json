@@ -9,7 +9,7 @@
   "license": "BSD-3-Clause",
   "type": "library",
   "scripts": {
-    "package:version": "echo v1.9.2",
+    "package:version": "echo v1.9.3",
     "package:validate": "composer validate",
     "package:regenerate": "composer dump-autoload",
     "install:dev": "composer install",
@@ -54,14 +54,12 @@
   ],
   "archive": {
     "exclude": [
-      "vendor",
-      "tests",
-      ".gitignore",
-      "composer.lock",
+      "/tests",
+      "/vendor",
       ".idea",
-      ".github",
-      ".DS_Store",
-      "Thumbs.db"
+      ".gitignore",
+      ".gitattributes",
+      "composer.lock"
     ]
   },
   "keywords": [
@@ -70,6 +68,7 @@
     "php",
     "memory",
     "in-memory",
-    "performance"
+    "performance",
+    "weroro"
   ]
 }
