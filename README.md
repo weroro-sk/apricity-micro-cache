@@ -21,9 +21,9 @@ composer require apricity/micro-cache
     - [MicroCache::clear](#microcacheclear)
     - [MicroCache::has](#microcachehas)
 2. [Inheritance](#inheritance-and-creation-of-a-unique-cache)
-2. [Tests](#run-tests)
-3. [Changelog](CHANGELOG.md)
-3. [License](#license)
+3. [Tests](#run-tests)
+4. [Changelog](CHANGELOG.md)
+5. [License](#license)
 
 ---
 
