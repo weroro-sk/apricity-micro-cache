@@ -3,5 +3,7 @@ vendor/ export-ignore
 .idea/ export-ignore
 .git/ export-ignore
 composer.lock export-ignore
+CONTRIBUTIONS.md export-ignore
+CHANGELOG.md export-ignore
 .gitignore export-ignore
 .gitattributes export-ignore

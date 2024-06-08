@@ -14,16 +14,18 @@ composer require apricity/micro-cache
 
 ## Table of contents
 
-1. Methods (API)
-    - [MicroCache::set](#microcacheset)
-    - [MicroCache::get](#microcacheget)
-    - [MicroCache::delete](#microcachedelete)
-    - [MicroCache::clear](#microcacheclear)
-    - [MicroCache::has](#microcachehas)
-2. [Inheritance](#inheritance-and-creation-of-a-unique-cache)
+1. Usage
+    - API
+        - [MicroCache::set](#microcacheset)
+        - [MicroCache::get](#microcacheget)
+        - [MicroCache::delete](#microcachedelete)
+        - [MicroCache::clear](#microcacheclear)
+        - [MicroCache::has](#microcachehas)
+    - [Inheritance](#inheritance-and-creation-of-a-unique-cache)
 3. [Tests](#run-tests)
-4. [Changelog](CHANGELOG.md)
-5. [License](#license)
+4. [Contributions](#contributions)
+5. [Changelog](CHANGELOG.md)
+6. [License](#license)
 
 ---
 
@@ -215,6 +217,13 @@ MicroCache::get('cache_key'); // cached_value
 ```shell
 composer test
 ```
+
+---
+
+## Contributions
+
+We welcome contributions from the community! For guidelines on how to contribute, please refer to
+the [CONTRIBUTIONS.md](CONTRIBUTIONS.md) file.
 
 ---
 

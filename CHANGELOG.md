@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [ ] PHPStan
 
+## [1.10.2] - 2024-06-08
+
+### Added
+
+- Contribution markdown
+
+### Fixed
+
+- Versioning
+
+### Removed
+
+- "Code Details" file
+
 ## [1.10.0] - 2024-06-08
 
 ### Added
@@ -27,4 +41,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Moved the "Code Details" section from the README file to a [separate file](src/MicroCache.php.md).
+- Moved the "Code Details" section from the README file to a separate file.

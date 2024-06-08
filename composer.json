@@ -9,7 +9,7 @@
   "license": "BSD-3-Clause",
   "type": "library",
   "scripts": {
-    "package:version": "echo v1.10.0",
+    "package:version": "echo v1.10.2",
     "package:validate": "composer validate",
     "package:regenerate": "composer dump-autoload",
     "install:dev": "composer install",
@@ -59,7 +59,9 @@
       ".idea",
       ".gitignore",
       ".gitattributes",
-      "composer.lock"
+      "composer.lock",
+      "CONTRIBUTIONS.md",
+      "CHANGELOG.md"
     ]
   },
   "keywords": [
