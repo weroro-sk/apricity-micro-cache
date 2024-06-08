@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](http://poser.pugx.org/apricity/micro-cache/v)](https://packagist.org/packages/apricity/micro-cache) 
 [![PHP Version Require](http://poser.pugx.org/apricity/micro-cache/require/php)](https://packagist.org/packages/apricity/micro-cache)
-[![License](http://poser.pugx.org/apricity/micro-cache/license)](https://packagist.org/packages/apricity/micro-cache) 
+[![License](http://poser.pugx.org/apricity/micro-cache/license)](LICENSE) 
 
 MicroCache is a lightweight and simple in-memory caching solution that allows you to store key-value pairs in memory.
 It is particularly useful for caching data that is expensive to generate or retrieve from external sources.
