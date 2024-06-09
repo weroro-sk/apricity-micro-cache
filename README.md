@@ -27,7 +27,7 @@ composer require apricity/micro-cache
         - [MicroCache::has](#microcachehas)
     - [Inheritance](#inheritance-and-creation-of-a-unique-cache)
 3. [Tests](#run-tests)
-4. [Contributions](#contributions)
+4. [Contributing](#contributing)
 5. [Changelog](CHANGELOG.md)
 6. [License](#license)
 
@@ -224,10 +224,10 @@ composer test
 
 ---
 
-## Contributions
+## Contributing
 
 We welcome contributions from the community! For guidelines on how to contribute, please refer to
-the [CONTRIBUTIONS.md](CONTRIBUTIONS.md) file.
+the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ---
 

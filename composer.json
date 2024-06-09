@@ -60,7 +60,7 @@
       ".gitignore",
       ".gitattributes",
       "composer.lock",
-      "CONTRIBUTIONS.md",
+      "CONTRIBUTING.md",
       "CHANGELOG.md"
     ]
   },
