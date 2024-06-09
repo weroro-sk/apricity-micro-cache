@@ -38,7 +38,7 @@ In the effort to create such a place, we hold to these values:
 
 This is a collaborative effort. We welcome all contributions submitted as pull requests.
 
-(Contributions on wording & style are also welcome.)
+(Contributions to wording and style are also welcome.)
 
 ### Bugs
 
@@ -46,7 +46,7 @@ A bug is a demonstrable problem that is caused by the code in the repository. Go
 thank you!
 
 Please try to be as detailed as possible in your report. Include specific information about the environment – version of
-PHP, etc, and steps required to reproduce the issue.
+PHP, etc. and steps required to reproduce the issue.
 
 ### Pull Requests
 
@@ -60,7 +60,7 @@ follow these instructions:
 * Document any change in `README.md` and `CHANGELOG.md`
 * One pull request per feature. If you want to do more than one thing, send multiple pull request
 
-### Runing tests
+### Running tests
 
 ```sh
 composer test
